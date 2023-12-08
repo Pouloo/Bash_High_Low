@@ -1,5 +1,5 @@
 # Shell Higher-Lower game
-![Pic related]([https://myoctocat.com/assets/images/base-octocat.svg](../assets/numbers.jpg)
+![Pic related](../assets/numbers.jpg)
 
 
 ## Shell script type
