@@ -5,7 +5,7 @@ do
 	clear
 	CONT=1
 	LIVES=$1
-	RANDINT=$(($RANDOM%$2+1))
+	RANDINT=$(($RANDOM%$2))
 	NB=$RANDINT
 	TRACE=0
 	STREAK=0
@@ -16,6 +16,7 @@ do
 	while [ $LIVES -gt 0 ]
 	do
 		echo "You have: $LIVES lives left, guess the number..."
+		echo "HINT: the number is between 0 and $2"
 		#echo "HINT: the number is $RANDINT"
 		echo $MEDAL
 		read NB
@@ -73,7 +74,7 @@ do
 	if [ $NB -eq $RANDINT -a $TRACE -eq 0 ]
 	then
 		clear
-		echo -e "Congratulations! You succeeded at your first try, \n luck must be on your side.\n"
+		echo -e "Congratulations! You succeeded at your first try, \nluck must be on your side.\n"
 	else
 		clear
 		echo -e "Too bad, you're out of lives! GAME OVER\n"
