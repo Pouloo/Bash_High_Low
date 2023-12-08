@@ -3,10 +3,17 @@ CONT=1
 while [ $CONT -eq 1 ]
 do
 	clear
-	CONT=1
-	LIVES=$1
-	RANDINT=$(($RANDOM%$2))
+	if [ $# -eq 2 ]
+	then
+		LIVES=$1
+		RANDINT=$(($RANDOM%$2))
+	else
+		LIVES=5
+		RANDINT=$(($RANDOM%10))
+	fi
+
 	NB=$RANDINT
+	CONT=1
 	TRACE=0
 	STREAK=0
 	MEDAL=" "
@@ -16,8 +23,13 @@ do
 	while [ $LIVES -gt 0 ]
 	do
 		echo "You have: $LIVES lives left, guess the number..."
-		echo "HINT: the number is between 0 and $2"
-		#echo "HINT: the number is $RANDINT"
+		if [ $# -eq 2 ]
+		then
+			echo "HINT: the number is between 0 and $2"
+		else
+			echo "HINT: the number is between 0 and 10"
+		fi
+		echo "HINT: the number is $RANDINT"
 		echo $MEDAL
 		read NB
 		clear
@@ -26,7 +38,7 @@ do
 			break
 		elif [ $NB -eq $RANDINT ]
 		then
-			echo -e "Good job, you got it right!\nYou recieve an additional life.\n"
+			echo -e "Good job, you got it right!\nYou recieve one additional life.\n"
 			LIVES=`expr $LIVES + 1`
 			STREAK=`expr $STREAK + 1`
 			RANDINT=$(($RANDOM%$2+1))
