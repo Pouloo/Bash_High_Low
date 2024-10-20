@@ -14,10 +14,10 @@
 Some suggested editors are VScode, Notepad++ and Sublime.
 - Some level of boredom.
 - A lot of luck.
-- Appreciation for games with simple gameplay loops (litterally).
+- Appreciation for games with simple gameplay loops (literally).
 
 ## Description
-This project is a simple number guessing game to occupy you during your programming sessions,
+This project is a simple number guessing game to occupy yourself during your programming sessions,
 while waiting for some big program to compile, a linux package to install, or an update to download !
 
 ## Use and rules
