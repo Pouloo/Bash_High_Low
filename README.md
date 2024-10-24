@@ -7,7 +7,7 @@
 - [ ] Z Shell
 - [ ] Bourne Shell
 
-## Techincal requirements
+## Technical requirements
 - A working computer!
 - Your command line interpreter of choice.
 - A proper text editor (In case you want to contribute).
@@ -20,7 +20,7 @@ Some suggested editors are VScode, Notepad++ and Sublime.
 This project is a simple number guessing game to occupy yourself during your programming sessions,
 while waiting for some big program to compile, a linux package to install, or an update to download !
 
-## Use and rules
+## Usage and rules
 - When launching the script, the first argument will be the player's lifes, the second one will
 be the number selection seed (from 0 to arg2); `./shell_guess.sh` `lives` `seed` .
 - Launching the script without arguments wil result in default settings (5 lives, from 0 to 10 selection).
